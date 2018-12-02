@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <div *ngIf="!registerMode" style="text-align: center">
+    <h1>Find din træningspartner!</h1>
+    <p class="lead">Kom ind og se hvem du kan træne med... Alt du skal gøre er at registrere dig!</p>
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg" (click)="registerToggle()">Registrer</button>
+      <button class="btn btn-info btn-lg">Lær mere</button>
+    </div>
+  </div>
+
+  <div *ngIf="registerMode" class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+      </div>
+    </div>
+  </div>
+</div>
